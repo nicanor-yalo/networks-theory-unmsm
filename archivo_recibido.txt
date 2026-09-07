@@ -1,0 +1,6 @@
+Este es un archivo de prueba enviado por puerto serial
+Línea 1 del archivo de prueba
+Línea 2 del archivo de prueba
+Línea 3 del archivo de prueba
+Línea 4 del archivo de prueba
+Línea 5 del archivo de prueba

@@ -247,8 +247,82 @@ cat /dev/ttyV0 > archivo_recibido_largo.txt
 ```
 
 Captura
+## 6 Prueba de comunicación serial y transferencia de archivo
 
-## 6. Resumen de Comandos Útiles
+**Crear el archivo:**
+
+```bash
+nano assignments/assignment-01/src/emisor.py
+```
+
+ **Crear el script receptor**
+
+```bash
+nano assignments/assignment-01/src/receptor.py
+```
+
+**Crear scripts para enviar y recibir archivos**
+
+Crear los archivos:
+
+```bash
+nano assignments/assignment-01/src/enviar_archivo.py
+nano assignments/assignment-01/src/recibir_archivo.py
+```
+
+**Asegurar que socat esté ejecutándose**
+
+Abrir una terminal nueva y ejecutar:
+
+```bash
+sudo socat -d -d pty,raw,echo=0,link=/dev/ttyV0 pty,raw,echo=0,link=/dev/ttyV1
+```
+Dejar esta terminal abierta.
+
+**Ejecutar los scripts**
+
+**Terminal 1 — Receptor**
+
+```bash
+cd /workspace/courses/semestre2026-II/networks_theory
+source venv/bin/activate
+python3 assignments/assignment-01/src/receptor.py
+```
+
+**Terminal 2 — Emisor**
+```bash
+cd /workspace/courses/semestre2026-II/networks_theory
+source venv/bin/activate
+python3 assignments/assignment-01/src/emisor.py
+```
+
+**Probar el envío de archivo**
+
+**Terminal 1 — Receptor de archivo**
+
+```bash
+cd /workspace/courses/semestre2026-II/networks_theory
+source venv/bin/activate
+python3 assignments/assignment-01/src/recibir_archivo.py /dev/ttyV0 archivo_recibido.txt
+```
+
+**Terminal 2 — Emisor de archivo**
+```bash
+cd /workspace/courses/semestre2026-II/networks_theory
+source venv/bin/activate
+python3 assignments/assignment-01/src/enviar_archivo.py mensaje.txt /dev/ttyV1
+```
+📸 Captura 7
+
+Captura de las dos terminales mostrando la transferencia de archivo.
+
+![foto](envio_archivos_python.png)
+
+```bash
+pip freeze > requirements.txt
+```
+
+## 7. Resumen de Comandos Útiles
 
 |	**Comando**	|	**Descripción**	|
 |:--------------|:--------------------|
@@ -259,7 +333,7 @@ Captura
 | `echo "mensaje" > /dev/ttyV1` | Escribir al puerto |
 | `Ctrl+A → Ctrl+X` | Salir de picocom|
 
-## 7. Conclusiones
+## 8. Conclusiones
 
 La práctica permitió comprender el funcionamiento de los puertos seriales virtuales en Linux, demostrando que:
 
