@@ -1,0 +1,32 @@
+# Capturas de tráfico de red (¡Perfecto! Son muy pesadas)
+*.pcap
+*.pcapng
+*.cap
+*.log
+
+# Python y Entornos Virtuales
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+venv/
+.venv/
+env/
+
+# Sistema Operativo (Linux y otros)
+.DS_Store
+Thumbs.db
+*~
+.directory
+
+# Archivos grandes / Comprimidos
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+
+# Editores de Código e IDEs
+.vscode/
+.idea/
+.project
+.settings/
