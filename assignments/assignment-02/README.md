@@ -3,7 +3,7 @@
 ### FACULTAD DE CIENCIAS MATEMÁTICAS  
 **ESCUELA PROFESIONAL DE COMPUTACIÓN CIENTÍFICA**
 
-* **Asignatura:** Redes y Comunicación de Datos  
+* **Asignatura:** Redes, Arquitectura y Comunicaciones   
 * **Tarea N.° 2:** Análisis Funcional de Wireshark  
 * **Docente:** Mg. Jaime Rubén Pariona Quispe  
 * **Integrantes:** 
