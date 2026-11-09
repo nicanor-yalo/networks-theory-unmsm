@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo 18 - Calculadora IMC</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>UNMSM | Grupo 18</h1>
+        
+        <!-- ESTO ES LO NUEVO QUE VAS A AGREGAR AL CENTRO -->
+        <div class="header-center">
+            <span>Redes, Arquitectura y Comunicaciones</span>
+            <small>Prof. Jaime Ruben Pariona Quispe</small>
+        </div>
+        <!-- FIN DE LO NUEVO -->
+
+        <a href="../index.html" class="btn-volver">Volver al Inicio</a>
+    </header>
+
+    <div class="container">
+        
+        <!-- Columna Izquierda: Información y Clasificaciones -->
+        <div class="card">
+            <div class="header-info">
+                <h3>Universidad Nacional Mayor de San Marcos</h3>
+                <p><strong>Facultad de Matemática</strong> - Computación Científica</p>
+                <p><strong>Curso:</strong> Redes, Arquitectura y Comunicaciones</p>
+            </div>
+
+            <h2>Grupo 18 - Integrantes</h2>
+            <ul class="lista-integrantes">
+                <li>👤 Huayta Huillcahuare, Luis Enrique</li>
+                <li>👤 Salvador Damián, Navarro </li>
+                <li>👤  Yalo Palomino, Nicanor</li>
+            </ul>
+
+            <h2 style="margin-top: 30px;">¿Qué es el IMC?</h2>
+            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 15px;">
+                El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de una persona. 
+                Es una herramienta útil para identificar posibles problemas de peso en adultos.
+            </p>
+
+            <table class="tabla-clasificacion">
+                <thead>
+                    <tr>
+                        <th>Rango IMC</th>
+                        <th>Clasificación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Menos de 18.5</td><td>Bajo peso</td></tr>
+                    <tr><td>18.5 - 24.9</td><td>Peso Normal</td></tr>
+                    <tr><td>25.0 - 29.9</td><td>Sobrepeso</td></tr>
+                    <tr><td>30.0 o más</td><td>Obesidad</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Columna Derecha: Formulario -->
+        <div class="card">
+            <h2>Calculadora de IMC</h2>
+            <p style="color: #64748B; margin-bottom: 25px; font-size: 0.95rem;">
+                Complete los siguientes campos para obtener su evaluación personalizada.
+            </p>
+
+            <form action="procesar.php" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre </label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre " required>
+                </div>
+
+                <div class="form-group">
+                    <label for="peso">Peso (kg)</label>
+                    <input type="number" id="peso" name="peso" step="0.01" min="1" placeholder="Ejemplo: 70.5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="altura">Altura (m)</label>
+                    <input type="number" id="altura" name="altura" step="0.01" min="0.5" max="2.5" placeholder="Ejemplo: 1.75" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Calcular Índice de Masa Corporal</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
